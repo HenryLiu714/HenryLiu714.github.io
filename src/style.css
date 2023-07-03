@@ -1,0 +1,22 @@
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.small_section {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.rotate {
+    animation: rotate 1s linear;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+}
