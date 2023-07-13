@@ -1,3 +1,7 @@
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
 
 @keyframes rotate {
     from {
@@ -9,14 +13,388 @@
     }
 }
 
-.small_section {
-    width: 100px;
-    height: 100px;
-    text-align: center;
+body {
+    background-color: ##FFFCDF;
+    margin: 0 0;
+    font-size: 0.5vw;
+    scrollbar-width: 0;
 }
 
-.rotate {
-    animation: rotate 1s linear;
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    width: 15vw;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5em;
+    border-right: 3px solid #D6EDFF;
+}
+
+.sidebar a {
+    padding: 5px 10px;
+    border: 2px solid #000000;
+    font-family: "Inter";
+    border-radius: 15px;
+}
+
+.centered-parent {
+    overflow: hidden;
+    height: 150vh;
+    display: grid;
+    background-image: linear-gradient(#08003D, #290052);
+    grid-template: 30em 30em;
+}
+
+#green-large {
+    left: 72.5em;
+    top: 65em;
+    position: absolute;
+    animation: rotate 10s linear;
     transform-origin: center;
     animation-iteration-count: infinite;
+    width: 15em;
+    transition: 1s;
+}
+
+#green-med {
+    left: 72.5em;
+    top: 65em;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(11%) saturate(1189%) hue-rotate(108deg) brightness(88%) contrast(83%);
+    position: absolute;
+    animation: rotate 7s linear;
+    padding: 0em 0em;
+    animation-direction: reverse;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 15em;
+    transition: 1s;
+}
+
+#green-small {
+    left: 72.5em;
+    top: 65em;
+    position: absolute;
+    animation: rotate 5s linear;
+    padding: 1.5em 1.5em;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 12em;
+    transition: 1s;
+}
+
+#blue-large {
+    position: absolute;
+    filter: brightness(0) saturate(100%) invert(37%) sepia(59%) saturate(1872%) hue-rotate(189deg) brightness(91%) contrast(95%);
+    left: 92.5em;
+    top: 65em;
+    animation: rotate 10s linear;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 15em;
+    transition: 1s;
+}
+
+#blue-med {
+    position: absolute;
+    animation: rotate 7s linear;
+    left: 92.5em;
+    top: 65em;
+    padding: 1em 1em;
+    animation-direction: reverse;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 13em;
+    transition: 1s;
+}
+#blue-small {
+    position: absolute;
+    left: 92.5em;
+    top: 65em;
+    animation: rotate 5s linear;
+    animation-delay: -3s;
+    padding: 1.5em 1.5em;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 12em;
+    transition: 1s;
+}
+
+#red-large {
+    left: 112.5em;
+    top: 65em;
+    position: absolute;
+    animation: rotate 10s linear;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 15em;
+    transition: 1s;
+}
+
+#red-med {
+    left: 112.5em;
+    top: 65em;
+    position: absolute;
+    filter: brightness(0) saturate(100%) invert(54%) sepia(11%) saturate(5826%) hue-rotate(303deg) brightness(101%) contrast(99%);
+    animation: rotate 7s linear;
+    animation-delay: -3s;
+    padding: 1em 1em;
+    animation-direction: reverse;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 13em;
+    transition: 1s;
+}
+#red-small {
+    top: 65em;
+    left: 112.5em;
+    filter: brightness(0) saturate(100%) invert(75%) sepia(13%) saturate(725%) hue-rotate(288deg) brightness(107%) contrast(91%);
+    position: absolute;
+    animation: rotate 5s linear;
+    animation-delay: -3s;
+    padding: 2em 2em;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    width: 11em;
+    transition: 1s;
+}
+
+.centered-child {
+    position: absolute;
+    user-select: none;
+}
+
+.shadow {
+    border-radius: 50%;
+    box-shadow: 
+        inset 0 0 3em 0.5em #E4D9FF,
+        0 0 5em 2em #E4D9FF;
+    opacity: 30%;
+    margin: 3em 3em;
+    transition: 1s;
+}
+
+#shadow-green {
+    left: 72.5em;
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    top: 65em;
+    box-shadow: 
+        inset 0 0 5em 1.25em #D0FFD6,
+        0 0 5em 2.5em #D0FFD6;
+    opacity: 30%;
+    margin: 3em 3em;
+    transition: 1s;
+}
+
+#shadow-red {
+    left: 112.5em;
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    top: 65em;
+    box-shadow: 
+        inset 0 0 5em 1.25em #FFD3E8,
+        0 0 5em 2.5em #FFD3E8;
+    opacity: 30%;
+    margin: 3em 3em;
+}
+
+#shadow-blue {
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    left: 92.5em;
+    top: 65em;
+    box-shadow: 
+        inset 0 0 5em 1.25em #E4D9FF,
+        0 0 5em 2.5em #E4D9FF;
+    opacity: 30%;
+    margin: 3em 3em;
+}
+
+.shadow:hover {
+    border-radius: 50%;
+    box-shadow: 
+        inset 0 0 5em 1.25em #F6E7CB,
+        0 0 5em 2.5em #F6E7CB;
+    opacity: 30%;
+    margin: 3em 3em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+#green-rings {
+    opacity: 0%;
+    animation: fadeIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#blue-rings {
+    opacity: 0%;
+    animation: fadeIn 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#red-rings {
+    opacity: 0%;
+    animation: fadeIn 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+#page-header {
+    position: absolute;
+    width: 60em;
+    left: 67.5em;
+    top: 35em;
+}
+
+#page-header h1 {
+    text-align: center;
+    text-shadow: 0 0 5em white;
+    padding: 0;
+    margin: 0;
+    font-size: 10em;
+    font-weight: 500;
+    color: white;
+    opacity: 0%;
+    animation: fadeIn 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;  
+    font-family: Inter;
+}
+
+#page-header h2 {
+    margin: 0;
+    opacity: 0%;
+    padding: 0;
+    text-align: right;
+    font-size: 2em;
+    font-weight: 100;
+    color: white;
+    animation: fadeIn 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    font-family: Inter;
+}
+
+#page-header h3 {
+    margin: 0;
+    opacity: 0%;
+    padding: 0;
+    text-align: left;
+    font-size: 2em;
+    font-weight: 100;
+    color: white;
+    animation: fadeIn 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    font-family: Inter;
+}
+
+#contact-banner {
+    position: absolute;
+    top: 90em;
+    left: 93.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon {
+    width: 2.5em;
+    height: 2.5em;
+    margin: 1em;
+    filter: invert(100%);
+    opacity: 50%;
+    transition: 1s;
+}
+
+.icon:hover {
+    opacity: 100%;
+}
+
+#hovertext {
+    left: 75.7em;
+    top: 81em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+}
+
+#about-me { 
+    width: 10em;
+    text-shadow: 0 0 200em white;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    transition-duration: 3s;
+}
+
+#about-me h1{
+    font-family: Inter;
+    font-weight: 100;
+    font-size: 2em;
+    color: white;
+}
+
+#projects {
+    width: 10em;
+    text-shadow: 0 0 200em white;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    transition-duration: 3s;
+    margin: 0em 10.6em;
+}
+
+#projects h1{
+    font-family: Inter;
+    font-weight: 100;
+    font-size: 2em;
+    color: white;
+}
+
+#more {
+    width: 10em;
+    text-shadow: 0 0 200em white;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    transition-duration: 3s;
+    margin: 0em 1em
+}
+
+#more h1{
+    font-family: Inter;
+    font-weight: 100;
+    font-size: 2em;
+    color: white;
 }

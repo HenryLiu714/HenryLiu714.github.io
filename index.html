@@ -1,20 +1,105 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+      <title>Henry Liu</title>
+      <meta name="description" content="Hi! My name is Henry Liu. Welcome to my personal portfolio">
 
-<head>
-    <title>Henry Liu</title>
-    <meta name="description" content="Hi! My name is Henry Liu. Welcome to my personal portfolio">
+      <link rel="stylesheet" href="src/style.css">
+      <link rel="preconnect" href="https://rsms.me/">
+      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+      <script src="src/main.js"></script>
+  </head>
 
-    <link rel="stylesheet" href="src/style.css">
-</head>
+  <body>
+    
 
+    <div class="centered-parent">
+      <div id="page-header">
+        <h3>Welcome to my website! I'm</h3>
+        <h1>Henry Liu</h1>
+        <h2>Student @ UMass Amherst</h2>
+      </div>
 
-<body>
-    <section class="small_section">
-        <h1 class="rotate">Yo its ya boi Henry!</h1>
-    </section>
-</body>
+      <div id="contact-banner">
+        <a href="https:github.com/henryliu714" target="_blank"><image src="images/icons/github.png" class="icon"></a>
+        <a href="https://www.linkedin.com/in/henry-liu-a43859216/" target="_blank"><image src="images/icons/linkedin.png" class="icon"></a>
+        <a href="mailto: henliu@umass.edu"><image src="images/icons/email.png" class="icon"></a>
+      </div>
+
+      <div class="centered-child" id="green-rings">
+        <embed src="images/circles/outer_green.svg" alt="Circle" id="green-large">
+        <embed src="images/circles/middle_green.svg" alt="Circle" id="green-med">
+        <embed src="images/circles/inner_green.svg" alt="Circle" id="green-small">
+        <div class="shadow" id="shadow-green" 
+          onmouseover="change_size('green-large', '20em', '70em', '62.5em'); 
+          change_size('green-med', '20em', '70em', '62.5em'); 
+          change_size('green-small', '15em', '71em', '63.5em');
+          change_size2('shadow-green', '12em', '71em', '63.75em');
+          fade_in('about-me')"
+
+          onmouseout="change_size('green-large', '15em', '72.5em', '65em'); 
+          change_size('green-med', '15em', '72.5em', '65em'); 
+          change_size('green-small', '12em', '72.5em', '65em');
+          change_size3('shadow-green', '9em', '72.5em', '65em', 'inset 0 0 5em 1.25em #D0FFD6, 0 0 5em 2.5em #D0FFD6');
+          fade_out('about-me')"
+          >
+        </div>
+      </div>
+
+      <div class="centered-child" id="blue-rings">
+        <embed src="images/circles/outer_blue.svg" alt="Circle" id="blue-large" >
+        <embed src="images/circles/middle_blue.svg" alt="Circle" id="blue-med">
+        <embed src="images/circles/inner_blue.svg" alt="Circle" id="blue-small">
+        <div class="shadow" id="shadow-blue" 
+          onmouseover="change_size('blue-large', '20em', '90em', '62.5em'); 
+          change_size('blue-med', '17em', '90.5em', '63em'); 
+          change_size('blue-small', '15em', '91em', '63.5em');
+          change_size2('shadow-blue', '12em', '91.25em', '63.5em');
+          fade_in('projects')"
+
+          onmouseout="change_size('blue-large', '15em', '92.5em', '65em'); 
+          change_size('blue-med', '13em', '92.5em', '65em'); 
+          change_size('blue-small', '12em', '92.5em', '65em');
+          change_size3('shadow-blue', '9em', '92.5em', '65em', 'inset 0 0 5em 1.25em #E4D9FF, 0 0 5em 2.5em #E4D9FF');
+          fade_out('projects')">
+        </div>
+      </div>
+
+      <div class="centered-child" id="red-rings">
+        <embed src="images/circles/outer_red.svg" alt="Circle" id="red-large">
+        <embed src="images/circles/middle_red.svg" alt="Circle" id="red-med">
+        <embed src="images/circles/inner_red.svg" alt="Circle" id="red-small">
+        <div class="shadow" id="shadow-red" 
+          onmouseover="change_size('red-large', '20em', '110em', '62.5em'); 
+          change_size('red-med', '17em', '110.5em', '63em'); 
+          change_size('red-small', '14em', '111em', '63.5em');
+          change_size2('shadow-red', '12em', '111em', '64em');
+          fade_in('more')"
+
+          onmouseout="change_size('red-large', '15em', '112.5em', '65em'); 
+          change_size('red-med', '13em', '112.5em', '65em'); 
+          change_size('red-small', '11em', '112.5em', '65em');
+          change_size3('shadow-red', '9em', '112.5em', '65em', 'inset 0 0 5em 1.25em #FFD3E8, 0 0 5em 2.5em #FFD3E8');
+          fade_out('more')"
+          ></div>
+      </div>
+    </div>
+
+    <div id="hovertext">
+      <div id="about-me">
+        <h1>About Me</h1>
+      </div>
+
+      <div id="projects">
+        <h1>Projects</h1>
+      </div>
+
+      <div id="more">
+        <h1>More</h1>
+      </div>
+    </div>
+  </body>
 
 
 </html>
