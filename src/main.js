@@ -31,3 +31,8 @@ function fade_in(element) {
 function fade_out(element) {
 	document.getElementById(element).style.opacity = "0%";
 }
+
+function scroll_to(element) {
+	var elt = document.getElementById(element);
+	elt.scrollIntoView();
+}

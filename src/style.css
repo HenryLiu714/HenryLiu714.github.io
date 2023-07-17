@@ -3,6 +3,11 @@
   :root { font-family: 'Inter var', sans-serif; }
 }
 
+html {
+    scroll-behavior: smooth;
+    transition-duration: 5s;
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0);
@@ -14,7 +19,7 @@
 }
 
 body {
-    background-color: ##FFFCDF;
+    background-color: #290052;
     margin: 0 0;
     font-size: 0.5vw;
     scrollbar-width: 0;
@@ -44,10 +49,11 @@ body::-webkit-scrollbar {
 
 .centered-parent {
     overflow: hidden;
-    height: 150vh;
+    height: 100vh;
     display: grid;
     background-image: linear-gradient(#08003D, #290052);
     grid-template: 30em 30em;
+    user-select: none;
 }
 
 #green-large {
@@ -191,6 +197,7 @@ body::-webkit-scrollbar {
     opacity: 30%;
     margin: 3em 3em;
     transition: 1s;
+    cursor: pointer;
 }
 
 #shadow-red {
@@ -205,6 +212,7 @@ body::-webkit-scrollbar {
         0 0 5em 2.5em #FFD3E8;
     opacity: 30%;
     margin: 3em 3em;
+    cursor: pointer;
 }
 
 #shadow-blue {
@@ -219,6 +227,7 @@ body::-webkit-scrollbar {
         0 0 5em 2.5em #E4D9FF;
     opacity: 30%;
     margin: 3em 3em;
+    cursor: pointer;
 }
 
 .shadow:hover {
@@ -397,4 +406,289 @@ body::-webkit-scrollbar {
     font-weight: 100;
     font-size: 2em;
     color: white;
+}
+
+hr {
+    width: 70%;
+    background-color: white;
+    height: 0.25em;
+    border-width: 0;
+    opacity: 50%;
+    margin: 2em auto 10em auto;
+}
+
+#about-me-section {
+    position: relative;
+    margin: 20em auto;
+    width: 40%;
+}
+
+#about-me-section:hover h1 {
+    color: #BAF2D8;
+}
+
+#about-me-section h1 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 5em;
+    color: white;
+    text-shadow: 0 0 2em white;
+    opacity: 100%;
+    transition-duration: 1s;
+    width: 5em;
+}
+
+.quote {
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0 0 2em white;
+    opacity: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about-me-section h1:hover {
+    text-shadow: 0 0 2em white;
+    opacity: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me-text {
+    flex-grow: 2;
+    margin-right: 10em;
+    margin-left: 0;
+}
+
+#about-me-head {
+    margin: 5em 0em;
+}
+
+#about-me-info {
+    position: relative;
+}
+
+#about-me-text p {
+    font-family: Inter;
+    font-size: 2em;
+    color: white;
+    font-weight: 200;
+    opacity: 90%;
+}
+
+#about-me-text p strong{
+    font-size: 1em;
+    font-weight: 500;
+    color: #D8F3FE;
+    text-shadow: 0 0 2em #D8F3FE;
+    opacity: 100%;
+}
+
+#about-me-image {
+    width: 20em;
+    border-radius: 50%;
+    border: none;
+    flex-grow: 1;
+}
+
+#projects-section {
+    position: relative;
+    margin: 10em auto;
+    width: 50%;
+}
+
+#projects-section h1 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 5em;
+    color: white;
+    text-shadow: 0 0 2em white;
+    opacity: 100%;
+    transition-duration: 1s;
+    width: 5em;
+    margin: auto;
+}
+
+.project-container {
+    user-select: none;
+    margin: 5em auto;
+    display: flex;
+    padding: 3em 3em;
+    border-radius: 2em;
+    transition-duration: 1s;
+    transform-origin: center;
+    transform: scale(0.95);
+    text-align: center;
+    align-items: center;
+}
+
+.project-container:hover {
+    background: #1F003D;
+    transform: scale(1.0);
+}
+
+.project-container h2 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 3em;
+    margin: 0.5em;
+    color: white;
+    text-shadow: 0 0 2em white;
+    opacity: 100%;
+    transition-duration: 2s;
+}
+
+.project-container:hover h2 {
+    color: #BAF2D8;
+}
+
+.project-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 3;
+    width: 60%;
+}
+
+.project-thumbnail {
+    width: 18em;
+    margin: 1em 0em;
+    transition-duration: 2s;
+}
+
+.project-button {
+    min-width: 7.5em;
+    margin: 1em;
+    text-align: center;
+    padding: 0.5em 1em;
+    border-width: 0.25em;
+    border-radius: 1em;
+    border-style: solid;
+    border-color: #BAF2D8;
+    transition-duration: 1s;
+    color: #BAF2D8;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-button:hover {
+    color: black;
+    background-color: #BAF2D8;
+
+}
+
+.project-button p {
+    font-family: Inter;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+}
+
+.project-summary a {
+    text-decoration: none;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 0em;
+}
+
+.skill {
+    padding: 0.75em 1.5em;
+    border-width: 0.25em;
+    border-radius: 1em;
+    border-style: solid;
+    border-color: #BAD7F2;
+    color: #BAD7F2;
+    text-align: center;
+    transition-duration: 1s;
+    margin: 1em 0.5em;
+}
+
+.skill:hover {
+    background-color: #BAD7F2;
+    color: black;
+    font-weight: 700;
+}
+
+.skill p {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.description {
+    margin: 1em;
+    text-align: left;
+}
+
+.description p {
+    color: white;
+    font-size: 1.75em;
+    font-weight: 300;
+    font-family: Inter;
+}
+
+.description li {
+    color: white;
+    font-size: 1.75em;
+    font-weight: 300;
+    font-family: Inter;
+}
+
+.description li a{
+    color: #BAD7F2;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Inter;
+}
+
+
+.description p a{
+    color: #BAD7F2;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Inter;
+}
+
+.grid-container {
+    display: flex;
+}
+
+.footer {
+    margin: -5em auto 3em auto;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    font-family: Inter;
+    font-size: 1.75em;
+    font-weight: 300;
+    opacity: 80%;
 }

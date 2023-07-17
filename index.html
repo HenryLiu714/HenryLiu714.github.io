@@ -12,14 +12,13 @@
   </head>
 
   <body>
-    
-
     <div class="centered-parent">
       <div id="page-header">
         <h3>Welcome to my website! I'm</h3>
         <h1>Henry Liu</h1>
         <h2>Student @ UMass Amherst</h2>
       </div>
+
 
       <div id="contact-banner">
         <a href="https:github.com/henryliu714" target="_blank"><image src="images/icons/github.png" class="icon"></a>
@@ -43,6 +42,8 @@
           change_size('green-small', '12em', '72.5em', '65em');
           change_size3('shadow-green', '9em', '72.5em', '65em', 'inset 0 0 5em 1.25em #D0FFD6, 0 0 5em 2.5em #D0FFD6');
           fade_out('about-me')"
+
+          onclick="scroll_to('about-me-h')"
           >
         </div>
       </div>
@@ -62,7 +63,9 @@
           change_size('blue-med', '13em', '92.5em', '65em'); 
           change_size('blue-small', '12em', '92.5em', '65em');
           change_size3('shadow-blue', '9em', '92.5em', '65em', 'inset 0 0 5em 1.25em #E4D9FF, 0 0 5em 2.5em #E4D9FF');
-          fade_out('projects')">
+          fade_out('projects')"
+
+          onclick="scroll_to('projects-h')">
         </div>
       </div>
 
@@ -98,6 +101,156 @@
       <div id="more">
         <h1>More</h1>
       </div>
+    </div>
+
+    <hr id="about-me-h">
+
+    <div id="about-me-section">
+      <div id="about-me-head">
+        <h1>About Me</h1>
+      </div>
+      
+      <div id="about-me-info">
+        <div class="flex-container">
+          <div id="about-me-text">
+            <p>Hi there! I'm <strong>Henry Liu</strong>.</p>
+            <p>I'm a <strong>computer science</strong> student at UMass Amherst
+             interested in software development and computer vision. I like reading 
+             <strong>books</strong>, listening to <strong>music</strong>, and improving my <strong>stationery collection</strong>!
+            </p>
+          </div>
+
+          <img src="images/henry.jpg" id="about-me-image">
+        </div>
+      </div>
+    </div>
+
+    <h2 class="quote"><i>I realized then that a man who had lived only one day could easily live for a hundred years in prison. He would have enough memories to keep him from being bored.</i></h2>
+    <hr id="projects-h">
+
+    <div id="projects-section">
+      <h1>Projects</h1>
+
+      <div class="project-container">
+        <div class="project-summary">
+          <h2>Sky Spectre</h2>
+          <img src="images/chess.gif" class="project-thumbnail">
+          <a href="https://github.com/HenryLiu714/Sky-Spectre" target="_blank">
+            <div class="project-button"><p>Source</p></div>
+          </a>
+        </div>
+
+        <div class="project-description">
+          <div class="skills">
+            <div class="skill">
+              <p>C/C++</p>
+            </div>
+
+            <div class="skill">
+              <p>Python</p>
+            </div>
+
+            <div class="skill">
+              <p>GIT</p>
+            </div>
+
+            <div class="skill">
+              <p>RayLib (2D graphics)</p>
+            </div>
+          </div>
+
+          <div class="description">
+            <p>Sky Spectre is a chess engine developed in C++ and rendered using the 
+              <a href="https:raylib.com" target="_blank">Raylib</a> library. The first version was created using a basic 
+              <a href="https:https://www.chessprogramming.org/Mailbox" target="_blank">mailbox</a> approach for board representation
+              programmed with Python3 (<a href="https://github.com/HenryLiu714/sky-spectre-beta" target="_blank">here</a>). The current version implements the following features:</p>
+              <ul>
+                <li><a href="https://www.chessprogramming.org/Bitboards.com" target="_blank">Bitboard</a> based game-state representation</li>
+                <li>Fast move generation using bit manipulations</li>
+                <li>Min-max move search algorithm optimized with alpha-beta pruning</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-container">
+        <div class="project-summary">
+          <h2>Stroke Classification</h2>
+          <img src="images/abstract.png" class="project-thumbnail">
+          <div class="buttons">
+            <a href="https://youtu.be/8mqAh9MTTdo">
+              <div class="project-button"><p>Presentation</p></div>
+            </a>
+            <a href="https://github.com/HenryLiu714/stroke_classification_network" target="_blank">
+              <div class="project-button"><p>Source</p></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <div class="skills">
+            <div class="skill">
+              <p>Python</p>
+            </div>
+
+            <div class="skill">
+              <p>Keras</p>
+            </div>
+
+            <div class="skill">
+              <p>Data Science/Machine Learning</p>
+            </div>
+          </div>
+
+          <div class="description">
+            <p>A machine learning model developed as a part of a research project with the goal of implementing neural networks to quickly identify strokes, as well as classify them into the correct <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/stroke/types-of-stroke" target="_blank">sub-category</a>. The project in its entirety required:</p>
+            <ul>
+              <li>Thorough data pruning and normalization using publicly available databases</li>
+              <li>Construction of the neural network using Python3 and the Keras and Tensorflow APIs</li>
+            </ul>
+            <p>A complete version of the final thesis may be found <a href="documents/Liu_Thesis_Final.pdf" target="_blank">here</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-container">
+        <div class="project-summary">
+          <h2>Graph Traversal Visualization</h2>
+          <img src="images/maze.gif" class="project-thumbnail">
+          <div class="buttons">
+            <a href="https://youtu.be/8mqAh9MTTdo">
+              <div class="project-button"><p>Demo</p></div>
+            </a>
+            <a href="https:github.com">
+              <div class="project-button"><p>Source</p></div>
+            </a>
+          </div>
+          
+        </div>
+
+        <div class="project-description">
+          <div class="skills">
+            <div class="skill">
+              <p>C/C++</p>
+            </div>
+
+            <div class="skill">
+              <p>Graph Theory</p>
+            </div>
+          </div>
+
+          <div class="description">
+            <p>A maze generation and solver program created using common graph traversal algorithms. The maze itself is originally generated (as seen in the demo video) using depth-first search and recursive backtracking. The program is then capable of traversing the maze using a variety of algorithms present in graph theory.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="quote"><i>When you come out of the storm, you won’t be the same person who walked in. That’s what this storm’s all about.</i></h2>
+    <hr>
+
+    <div class="footer">
+      <p><i>It's a magical world, Hobbes, ol' buddy...<br>...Let's go exploring!</i></p>
     </div>
   </body>
 
