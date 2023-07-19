@@ -24,6 +24,10 @@ function open_new_tab(website) {
 	window.open(website, "_blank");
 }
 
+function change_color(filter) {
+	document.getElementById('arrow').style.filter = filter;
+}
+
 function fade_in(element) {
 	document.getElementById(element).style.opacity = "100%";
 }
