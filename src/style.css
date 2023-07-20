@@ -43,6 +43,7 @@ body {
     background-color: #290052;
     margin: 0 0;
     font-size: 0.5vw;
+    user-select: none;
 }
 
 
@@ -440,8 +441,41 @@ hr {
 
 #about-me-section {
     position: relative;
-    margin: 20em auto;
+    margin: 10em auto;
     width: 40%;
+}
+
+.extra {
+    margin: auto;
+    width: 45%;
+    display: flex;
+    transform: scale(0.7);
+    transition-duration: 1s;
+}
+
+.extra:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.extra:hover p {
+    color: #BAF2D8;
+}
+
+.extra img {
+    width: 25%;
+    filter: invert(100%);
+    opacity: 80%;
+}
+
+.extra p {
+    flex-basis: 70%;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+    margin: auto;
+    transition-duration: 1s;
 }
 
 #about-me-section:hover h1 {
@@ -475,11 +509,16 @@ hr {
     opacity: 100%;
 }
 
+.extras {
+    display: inline-flex;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: auto auto 5em auto;
 }
 
 #about-me-text {
@@ -514,7 +553,6 @@ hr {
 
 #about-me-image {
     width: 20em;
-    border-radius: 50%;
     border: none;
     flex-grow: 1;
 }

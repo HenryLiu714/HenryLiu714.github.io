@@ -40,3 +40,7 @@ function scroll_to(element) {
 	var elt = document.getElementById(element);
 	elt.scrollIntoView();
 }
+
+function goto(url) {
+	location.href=url;
+}
